@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageview_hunt_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/hunt_desc"
+        android:scaleType="fitStart" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/generic_name"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hunt_name" />
+
+        <TextView
+            android:id="@+id/textview_hunt_name"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/generic_name"
+            android:paddingLeft="5sp" />
+
+        <TextView
+            android:id="@+id/generic_zone"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/generic_name"
+            android:text="@string/zone" />
+
+        <TextView
+            android:id="@+id/textview_hunt_zone"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/generic_name"
+            android:layout_toRightOf="@+id/generic_zone"
+            android:paddingLeft="5sp" />
+
+        <TextView
+            android:id="@+id/generic_respawn"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/generic_zone"
+            android:text="@string/respawn" />
+
+        <TextView
+            android:id="@+id/textview_hunt_respawn"
+            style="@style/hunt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/generic_zone"
+            android:layout_toRightOf="@+id/generic_respawn"
+            android:paddingLeft="5sp" />
+    </RelativeLayout>
+
+</LinearLayout>
