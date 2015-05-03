@@ -64,12 +64,16 @@ public class HuntsListActivity extends ActionBarActivity {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[0]));
         // Hunts in La Noscea
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1]));
-        // Hunts in Thanalan
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2]));
         // Hunts in Shroud
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2]));
+        // Hunts in Thanalan
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
-        // About the app and
+        // Hunts in Coerthas
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4]));
+        // Hunts in Mor Dhona
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5]));
+        //About the app
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6]));
 
         // Recycle the typed array
         //navMenuIcons.recycle();
@@ -112,7 +116,7 @@ public class HuntsListActivity extends ActionBarActivity {
 
     /**
      * Slide menu item click listener
-     * */
+     */
     private class SlideMenuClickListener implements
             ListView.OnItemClickListener {
         @Override
@@ -158,7 +162,7 @@ public class HuntsListActivity extends ActionBarActivity {
 
     /**
      * Diplaying fragment view for selected nav drawer list item
-     * */
+     */
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
@@ -171,13 +175,16 @@ public class HuntsListActivity extends ActionBarActivity {
                 fragment = new NosceaListFragment();
                 break;
             case 2:
-                fragment = new HuntsListFragment();
+                fragment = new ShroudListFragment();
                 break;
             case 3:
-                fragment = new HuntsListFragment();
+                fragment = new ThanalanListFragment();
                 break;
             case 4:
-                fragment = new HuntsListFragment();
+                fragment = new CoerthasListFragment();
+                break;
+            case 5:
+                fragment = new DhonaListFragment();
                 break;
             default:
                 fragment = new HuntsListFragment();

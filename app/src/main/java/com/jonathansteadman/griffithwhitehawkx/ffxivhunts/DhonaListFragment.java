@@ -4,10 +4,11 @@ package com.jonathansteadman.griffithwhitehawkx.ffxivhunts;
 import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.app.ListFragment;
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -15,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class HuntsListFragment extends ListFragment {
+public class DhonaListFragment extends HuntsListFragment {
 
     ArrayList<Hunts> hunts = new ArrayList<Hunts>();
 
@@ -26,7 +27,7 @@ public class HuntsListFragment extends ListFragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
 
-        hunts = HuntsSet.getInstance().getHunts();
+        hunts = HuntsSet.getInstance().getDhona();
 
         ArrayAdapter<Hunts> adapter = new HuntsAdapter(hunts);
 
@@ -40,10 +41,12 @@ public class HuntsListFragment extends ListFragment {
         Hunts hunts = (Hunts) (getListAdapter()).getItem(position);
 
         TextView respawnView = (TextView) v.findViewById(R.id.textview_hunt_respawn);
-        //pass respawnView to the counter class, which sets the counter in the textview
         CounterClass counter = new CounterClass(getActivity(), (hunts.getRespawn() * 3600000), 1000, respawnView);
         counter.start();
+        //System.out.println("Counter: " + counter);
 
+        //TextView respawnView = (TextView)v.findViewById(R.id.textview_hunt_respawn);
+        //respawnView.setText(getActivity().
 
     }
 

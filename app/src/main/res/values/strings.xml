@@ -12,8 +12,10 @@
     <string-array name="nav_drawer_items">
         <item>All</item>
         <item>La Noscea</item>
-        <item>Thanalan</item>
         <item>Shroud</item>
+        <item>Thanalan</item>
+        <item>Coerthas</item>
+        <item>Mor Dhona</item>
         <item>About</item>
     </string-array>
 

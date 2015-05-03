@@ -1,10 +1,9 @@
-
 package com.jonathansteadman.griffithwhitehawkx.ffxivhunts;
 
 import java.util.Date;
 
 public class Hunts {
-    
+
     private int image;
 
     private String name;
@@ -12,7 +11,7 @@ public class Hunts {
     private String zone;
 
     private int respawn;
-    
+
     private Date timeKilled = null;
 
     public Hunts(int image, String name, String zone, int respawn) {
@@ -21,7 +20,7 @@ public class Hunts {
         this.zone = zone;
         this.respawn = respawn;
     }
-    
+
     public int getImage() {
         return image;
     }
