@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class CounterClass extends CountDownTimer {
 
-    //static final String EXTRA_HMS = null;
-
     String hms;
 
     Context mContext;
@@ -34,8 +32,6 @@ public class CounterClass extends CountDownTimer {
         }
     }
 
-    // @SuppressLint("NewApi")
-    // @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     @Override
     public void onTick(long millisUntilFinished) {
         long millis = millisUntilFinished;
@@ -52,8 +48,6 @@ public class CounterClass extends CountDownTimer {
             mTextView.setText(hms);
             mTextView.setTextColor(Color.RED);
         }
-        //Bundle args = new Bundle();
-        //args.putString(EXTRA_HMS, hms);
     }
 
 }

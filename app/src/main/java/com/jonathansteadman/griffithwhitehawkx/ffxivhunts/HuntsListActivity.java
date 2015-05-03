@@ -49,11 +49,6 @@ public class HuntsListActivity extends ActionBarActivity {
         // load slide menu items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
-        // nav drawer icons from resources
-        /*
-        navMenuIcons = getResources()
-                .obtainTypedArray(R.array.nav_drawer_icons);*/
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
@@ -230,11 +225,5 @@ public class HuntsListActivity extends ActionBarActivity {
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
-
-    /*
-    @Override
-    protected Fragment createFragment() {
-        return new HuntsListFragment();
-    }*/
 
 }

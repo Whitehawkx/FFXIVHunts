@@ -19,8 +19,6 @@ public class HuntsListFragment extends ListFragment {
 
     ArrayList<Hunts> hunts = new ArrayList<Hunts>();
 
-    Context mContext;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +41,6 @@ public class HuntsListFragment extends ListFragment {
         //pass respawnView to the counter class, which sets the counter in the textview
         CounterClass counter = new CounterClass(getActivity(), (hunts.getRespawn() * 3600000), 1000, respawnView);
         counter.start();
-
 
     }
 

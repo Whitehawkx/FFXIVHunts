@@ -19,8 +19,6 @@ public class ThanalanListFragment extends HuntsListFragment {
 
     ArrayList<Hunts> hunts = new ArrayList<Hunts>();
 
-    Context mContext;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +40,6 @@ public class ThanalanListFragment extends HuntsListFragment {
         TextView respawnView = (TextView) v.findViewById(R.id.textview_hunt_respawn);
         CounterClass counter = new CounterClass(getActivity(), (hunts.getRespawn() * 3600000), 1000, respawnView);
         counter.start();
-        //System.out.println("Counter: " + counter);
-
-        //TextView respawnView = (TextView)v.findViewById(R.id.textview_hunt_respawn);
-        //respawnView.setText(getActivity().
 
     }
 

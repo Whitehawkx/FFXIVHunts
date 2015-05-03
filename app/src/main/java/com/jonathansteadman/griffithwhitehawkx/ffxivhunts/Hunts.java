@@ -41,9 +41,5 @@ public class Hunts {
     public String toString() {
         return name;
     }
-    /*
-    public Date getTimeUntilRespawn() {
-        return respawn - Date.;
-    }*/
 
 }
